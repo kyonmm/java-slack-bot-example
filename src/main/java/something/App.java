@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class App {
     public static void main(String[] args) {
-        String botToken ="xoxb-854564613383-853322617664-IqwPL7VwLOPF4NKzcTYfHlIB" ;
+        String botToken = System.getenv("SLACK_API_TOKEN");
 
         SlackletService slackService = new SlackletService(botToken);
 
