@@ -1,0 +1,1 @@
+worker: java -jar build/libs/java-slack-bot-example-all.jar

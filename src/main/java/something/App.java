@@ -22,6 +22,7 @@ public class App {
 
             @Override
             public void onMessagePosted(SlackletRequest req, SlackletResponse resp) {
+                System.out.println("receive");
                 // メッセージがユーザーからポストされた
 
                 // メッセージがポストされたチャンネルを取得する
@@ -42,6 +43,7 @@ public class App {
         });
 
         // slackletserviceを開始(slackに接続)
+        System.out.println("starting");
         slackService.start();
     }
 }
