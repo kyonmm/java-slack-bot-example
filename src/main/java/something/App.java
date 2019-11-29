@@ -27,7 +27,7 @@ public class App {
 
                 // メッセージがポストされたチャンネルを取得する
                 SlackChannel channel = req.getChannel();
-
+                System.out.println(channel.getName());
                 if ("example".equals(channel.getName())) {
                     // #randomチャンネルだった場合
 
