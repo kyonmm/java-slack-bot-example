@@ -28,17 +28,11 @@ public class App {
                 // メッセージがポストされたチャンネルを取得する
                 SlackChannel channel = req.getChannel();
                 System.out.println(channel.getName());
-                if ("example".equals(channel.getName())) {
-                    // #randomチャンネルだった場合
-
-                    // メッセージ本文を取得
-                    String content = req.getContent();
-
+                String content = req.getContent();
+                if(content.trim().equals("CICD")){
                     // メッセージがポストされたチャンネルに対して、BOTからメッセージを送る
-                    resp.reply("「" + content + "」て言いましたね。");
-
+                    resp.reply("実践入門！");
                 }
-
             }
         });
 
