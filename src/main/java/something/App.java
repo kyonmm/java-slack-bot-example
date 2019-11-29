@@ -34,6 +34,11 @@ public class App {
                     resp.reply("実践入門！");
                 }
             }
+
+            @Override
+            public void onMentionedMessagePosted(SlackletRequest req, SlackletResponse resp) {
+                resp.reply(req.getContent());
+            }
         });
 
         // slackletserviceを開始(slackに接続)
