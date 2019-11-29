@@ -47,3 +47,5 @@ tasks.withType(JavaCompile){
 shadowJar {
     mergeServiceFiles()
 }
+task stage(dependsOn: ['shadowJar', 'clean'])
+shadowJar.mustRunAfter clean
