@@ -12,7 +12,7 @@ import org.riversun.xternal.simpleslackapi.SlackChannel;
 import java.io.IOException;
 
 public class App {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         String botToken ="xoxb-854564613383-853322617664-IqwPL7VwLOPF4NKzcTYfHlIB" ;
 
         SlackletService slackService = new SlackletService(botToken);
@@ -44,6 +44,12 @@ public class App {
 
         // slackletserviceを開始(slackに接続)
         System.out.println("starting");
-        slackService.start();
+        try {
+            slackService.start();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+        System.out.println("started");
     }
 }
